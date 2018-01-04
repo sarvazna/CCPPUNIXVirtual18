@@ -1,0 +1,223 @@
+1. Write a C program to accept two integers and check whether they are equal or not.  
+  Test Data : 15 15 
+  Expected Output :  
+  Number1 and Number2 are equal 
+
+#include<stdio.h>
+
+
+int main() 
+{
+   
+int x=15;
+   
+int y=15;
+   
+if (x==y)
+   
+printf("Number1 and Number2 are equal");
+   
+else
+   printf("Number1 and Number2 are not equal");
+
+}
+------------------------------------------------------------------------------------------------------------------
+2. Write a C program to check whether a given number is positive or negative.  
+   Test Data : 15  
+   Expected Output : 
+   15 is a positive number
+
+#include<stdio.h>
+
+
+int main() 
+{
+
+   int x=15;
+
+   if (x>=0)
+
+   printf("%d is positive number",x);
+
+   else
+   
+   printf("%d is negative number",x);
+
+} 
+-------------------------------------------------------------------------------------------------------------------
+
+3. Write a C program to check whether a triangle is Equilateral, Isosceles or Scalene.  
+   Test Data :  
+   50 50 60  
+   Expected Output : 
+   This is an isosceles triangle. 
+
+#include<stdio.h>
+
+
+int main() 
+{
+
+   int a=50,b=50,c=60;
+
+   if ((a==b)&&(a==c)&&(b==c))
+
+   printf("This is an equolateral triangle.");
+ 
+   else if((a!=b)&&(b!=c)&&(c!=a))
+  
+   printf("This is a Scalene triangle.");
+
+   else
+
+   printf("This is a Isosceles triangle.");
+
+}
+-------------------------------------------------------------------------------------------------------------------
+
+4. Write a C program to check whether a character is an alphabet, digit or special character.  
+   Test Data :  
+   @ 
+   Expected Output : 
+   This is a special character. 
+
+#include<stdio.h>
+
+
+int main()
+ {
+
+   char a;
+   scanf("%c",&a);
+
+   if (a>=65&&a<=90||a>=97&&a<=122)
+
+   printf("This is a alphabetic character.");
+
+   else if ((a>=48)&&(a<=57))
+
+   printf("This is a numeric character.");
+
+   else if ((a>=0)&&(a<=31))
+
+   printf("Invalid Data");
+
+   else
+
+   printf("This is a special character.");
+
+}
+--------------------------------------------------------------------------------------------------------------------
+
+5. Write a program in C to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follow : Go to the editor 
+ 
+ 
+   Unit	                         Charge/unit 
+   upto 199	                      @1.20 
+   200 and above but less than 400	@1.50 
+   400 and above but less than 600	@1.80 
+   600 and above	@2.00 
+   If bill exceeds Rs. 400 then a surcharge of 15% will be charged and the minimum bill should be of Rs. 100/- 
+  
+ 
+   Test Data :  
+   1001 
+   James  
+   800  
+   Expected Output : 
+   Customer IDNO :1001  
+   Customer Name :James  
+   unit Consumed :800  
+   Amount Charges @Rs. 2.00 per unit : 1600.00  
+   Surchage Amount : 240.00  
+   Net Amount Paid By the Customer : 1840.00 
+
+#include<stdio.h>
+
+
+void main() 
+{
+
+   char c[10];
+
+   int a,b;
+
+   float d=0,e=0,f;
+
+   scanf("%d",&a);
+
+   scanf("%s",c);
+
+   scanf("%d",&b);
+
+   if (b<=199)
+
+   {
+
+      f=1.20;
+   
+      d=b*1.20;
+ 
+   }
+ 
+   else if (b>=200&&b<400)
+
+   {
+    
+      f=1.50;
+   
+      d=b*1.50;
+   
+   }
+   
+   else if (b>=400&&b<600) 
+
+   {
+
+      f=1.80;
+  
+      d=b*1.80;
+
+   }
+    
+   else
+
+   {
+   
+       f=2.00;
+ 
+       d=b*2;
+  
+   }
+
+   printf("customer idno : %d\n",a);
+ 
+   printf("customer name : %s\n",c);
+
+   printf("unit consumed : %d\n",b);
+
+   printf("Amount Charges @Rs. %.2f per unit : %.2f\n",f,d);
+
+   if(d>100)
+
+   if (d>400)
+ 
+   {
+   
+      e=d*0.15;
+ 
+      d=d+e;
+
+   }
+ 
+   printf("Surchage Amount : %.2f\n",e);
+
+   printf("Net Amount Paid By the Customer : %.2f\n",d); 
+
+}
+
+
+
+
+
+
