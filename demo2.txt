@@ -1,0 +1,99 @@
+1. write a program to print 10 to 1 numbers
+
+#include<stdio.h>
+
+
+int main()
+{
+
+   int x;
+
+   for(x=10;x>=1;x--)
+
+   printf("%d ", x);
+
+}
+-------------------------------------------------------------------------------------------------------------------
+2. write a program to print Z to A alphabets
+
+#include<stdio.h>
+
+
+int main() 
+{
+
+   int x=10;
+
+   for(x=90;x>=65;x--)
+
+   printf("%c ", x);
+
+}
+-------------------------------------------------------------------------------------------------------------------
+
+3. c program using math.h librart
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   int x=25;
+   float y;
+   y=sqrt(x);
+   printf("square root of %d is %f",x,y);
+}
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   float x=4.452,y;
+   y=floor(x);
+   printf("floor of %f is %f",x,y);
+}
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   float x=4.452,y;
+   y=ceil(x);
+   printf("ceil of %f is %f",x,y);
+}
+----------------------------------------------------------------------------------------------------------------------
+
+4.Addition of 2 arrays.
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+void main()
+{
+int a[100],b[100],c[100],i,j,n;
+printf("\nEnter the size of array:");
+scanf("%d",&n);
+printf("\nEnter the values in first array:");
+for(i=0;i<n;i++)
+{
+   scanf("%d",&a[i]);
+
+}
+printf("\nEnter the values in second array:");
+for(i=0;i<n;i++)
+{
+   scanf("%d",&b[i]);
+
+}
+printf("\nAddition of two arrays:");
+for(i=0;i<n;i++)
+{
+c[i]=a[i]+b[i];
+}
+for(i=0;i<n;i++)
+{
+printf("c[%d]=%d",i,c[i]);
+}
+
+
+}
+------------------------------------------------------------------------------------------------------------------------
