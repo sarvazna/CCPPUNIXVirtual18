@@ -1,0 +1,175 @@
+1. Write five statements to print the asterisk pattern: 
+   ***** 
+   ***** 
+   *****
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  clrscr();
+  int n,i,j;
+  scanf("%d",&n);
+  for(i=0;i<n;i++)
+  {
+     for(j=0;j<n;j++)
+	printf("*");
+     printf("\n");
+  }
+  getch();
+} 
+
+--------------------------------------------------------------------------------------------------------------------
+
+2. Write C code that will display the calculator menu. 
+   The program will prompt the user to choose the operation choice (from 1 to 5). Then it asks the user to input two integer vales for the calculation. See the sample below.  
+    MENU  
+            1. Add  
+             2. Subtract  
+             3. Multiply  
+             4. Divide  
+             5. Modulus  
+   Enter your choice: 1  
+   Enter your two numbers: 12 15  
+   Result: 27  
+      
+   Continue? y  
+      
+   The program also asks the user to decide whether he/she wants to continue the operation. If he/she input ‘y’, the program will prompt the user  
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   clrscr();
+   int a,b,c,d;
+   char e;
+   do
+   {
+      printf("MENU\n\t1. Add\n\t2. Subtract\n\t3. Multiply\n\t4. Divide\n\t5. Modulus\n");
+      printf("Enter your choice: ");
+      scanf("%d",&a);
+      printf("\nEnter your two numbers: ");
+      scanf("%d %d",&b,&c);
+      if(a==1)
+	 d=b+c;
+      else if(a==2)
+	 d=b-c;
+      else if(a==3)
+	 d=b*c;
+      else if(a==4)
+	 d=b/c;
+      else if(a==5)
+	 d=b%c;
+      else
+	 printf("Enter valid number");
+      printf("\nResult: %d",d);
+      printf("\nDo u want to continue?(y/n)");
+      scanf("%c",&e);
+   }while(e=='y');
+   getch();
+}
+
+---------------------------------------------------------------------------------------------------------------------
+
+3. Write a program that will ask the user to input three integer values from the keyboard. Then it will print the smallest and largest of those numbers. 
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  clrscr();
+  int a,b,c;
+  printf("Enter 3 no's");
+  scanf("%d %d %d",&a,&b,&c);
+  if(a>b&&a>c)
+     printf("%d is the greatest number",a);
+  if(b>a&&b>c)
+     printf("%d is the greatest number",b);
+  if(c>a&&c>b)
+     printf("%d is the greatest number",c);
+  if(a<b&&a<c)
+     printf("\n%d is the smallest number",a);
+  if(b<a&&b<c)
+     printf("\n%d is the smallest number",b);
+  if(c<a&&c<b)
+     printf("\n%d is the smallest number",c);
+  if(a==b==c)
+     printf("\nAll are equal");
+  getch();
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+4. Write a C program to check whether year is leap year or not using conditional operator.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ clrscr();
+ int n;
+ printf("Enter the year");
+ scanf("%d",&n);
+ (n%4==0)&&(n%100!=0) ? printf("\nLeap Year") : printf("\nNot a Leap Year");
+/* printf("\n%s",(((n%4==0)&&(n%100!=0)) ? "Leap Year" : "Not a Leap Year"));*/
+ getch();
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Write a C program to print all Armstrong numbers between 1 to n.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int n,cn=0,dup,tem;
+  printf("Enter the number");
+  scanf("%d",&n);
+  dup=n;
+  while(dup!=0)
+  {
+     tem=dup%10;
+     cn=cn+(tem*tem*tem);
+     dup=dup/10;
+  }
+  if(n==cn)
+     printf("\nArmstrong Number");
+  else
+     printf("\nNot an Armstrong Number");
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+
+6. Write a C program to print all ASCII character with their values.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int i;
+  for(i=0;i<128;i++)
+     printf("%d : %c ",i,i);
+  getch();
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+
+7. C program for ternary operator?
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+ clrscr();
+ int n;
+ printf("Enter the year");
+ scanf("%d",&n);
+ (n%4==0)&&(n%100!=0) ? printf("\nLeap Year") : printf("\nNot a Leap Year");
+/* printf("\n%s",(((n%4==0)&&(n%100!=0)) ? "Leap Year" : "Not a Leap Year"));*/
+ getch();
+} 
+
+-----------------------------------------------------------------------------------------------------------------------------
+ 
