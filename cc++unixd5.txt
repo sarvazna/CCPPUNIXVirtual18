@@ -1,0 +1,163 @@
+1. Pointout the error from the code and fix the issue.(O/p shld be 007 90.99)
+
+#include <iostream>
+
+
+using namespace std;
+
+
+class A
+
+{
+
+    public:
+
+        char a[5]="007";
+
+        float b=90.99;
+
+};
+
+
+int main()
+{
+
+    A obj1;
+
+    A obj2;
+
+    cout<<obj1.a<<" ";
+
+    cout<<obj2.b;
+}
+ 
+  o/p: 007 90.99
+  declared char variable as string and replaced endl by space. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. predict output. 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+   int i, j;
+   
+   j = 10;
+   i = (j++, j+100, 999+j);
+
+   cout << i;
+   
+   return 0;
+}
+
+ o/p: 1010
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. predict output
+
+#include <iostream>  
+using namespace std;  
+ class Shape    
+{    
+    public:   
+    virtual void draw()=0;    
+};    
+ class Rectangle : Shape    
+{    
+    public:  
+     void draw()    
+    {    
+        cout < <"drawing rectangle..." < <endl;    
+    }    
+};    
+class Circle : Shape    
+{    
+    public:  
+     void draw()    
+    {    
+        cout <<"drawing circle..." < <endl;    
+    }    
+};    
+int main( ) {  
+    Rectangle rec;  
+    Circle cir;  
+    rec.draw();    
+    cir.draw();   
+   return 0;  
+}  
+
+o/p : drawing rectangle...
+
+      drawing circle...
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. predict output.
+
+#include <iostream>
+ 
+using namespace std;
+ 
+// Base class
+class Shape  {
+
+public:
+   // pure virtual function providing interface framework.
+    virtual int getArea() =0;
+	
+   void setWidth(int w) {
+      width = w;
+   }
+	
+   void setHeight(int h) {
+      height = h;
+   }
+	
+protected:
+   int width;
+   int height;
+};
+ 
+// Derived classes
+class Rectangle: public Shape {
+
+public:
+   int getArea() { 
+      return (width * height); 
+   } 
+};
+
+class Triangle: public Shape {
+
+public:
+   int getArea() { 
+      return (width * height)/2; 
+   }
+};
+ 
+int main(void) {
+   Rectangle Rect;
+   Triangle  Tri;
+ 
+   Rect.setWidth(5);
+   Rect.setHeight(7);
+   // Print the area of the object.
+   cout << "Total Rectangle area: " << Rect.getArea() << endl;
+
+   Tri.setWidth(5);
+   Tri.setHeight(7);
+	
+   // Print the area of the object.
+   cout << "Total Triangle area: " << Tri.getArea() << endl; 
+
+   return 0;
+}
+
+o/p : Total Rectangle area: 35
+
+      Total Triangle area: 17
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
